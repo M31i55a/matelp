@@ -21,7 +21,7 @@ export default function DotBackground() {
 
     const dotSize = 3.5
     const spacing = dotSize * 3
-    const minTransp = 30
+    const minTransp = 15
     const areaOfEffect = 50
 
     let dots: Dot[] = []

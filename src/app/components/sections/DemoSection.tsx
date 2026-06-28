@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react"
 import useScrollProgress from "../../lib/useScrollProgress"
 import { cn } from "../../lib/utils"
+import GridBackground from "../GridBackground"
 
 const features = [
   {
@@ -91,6 +92,9 @@ export default function DemoSection() {
       style={{ height: "500vh" }}
     >
       <div className="sticky top-0 left-0 w-full h-screen overflow-hidden bg-[#0a0a0f]">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-mate-500/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/15 rounded-full blur-[120px]" />
+        <GridBackground />
         {/* The whole scene: "How i" + white rect + "t works" */}
         <div className="absolute inset-0 flex items-center justify-center">
           {/* "How i" - absolute positioned, slides left */}
@@ -123,7 +127,7 @@ export default function DemoSection() {
 
           {/* The white element — starts as a thin vertical line, grows to fill the entire screen */}
           <div
-            className="bg-white flex items-center justify-center overflow-hidden transition-shadow duration-500 relative z-0"
+            className="bg-[#f1eff8] flex items-center justify-center overflow-hidden transition-shadow duration-500 relative z-0"
             style={{
               width: rectGrowX2 > 0.99 ? "100vw" : `${rectW}px`,
               height: rectGrowY > 0.99 ? "100vh" : `${rectH}px`,
