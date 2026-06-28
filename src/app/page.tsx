@@ -14,7 +14,7 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <Reveal><AboutSection /></Reveal>
+        <AboutSection />
         <Reveal><FeaturesSection /></Reveal>
         <DemoSection />
         <Reveal><CommunitySection /></Reveal>
