@@ -1,13 +1,14 @@
+import DotBackground from "../DotBackground"
+
 export default function HeroSection() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-grid" />
+      <DotBackground />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-mate-500/20 rounded-full blur-[120px]" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/15 rounded-full blur-[120px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto section-padding text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-mate-500/30 bg-mate-500/10 text-sm text-mate-300 mb-8 animate-fade-in">
-          <span className="w-2 h-2 rounded-full bg-mate-400 animate-pulse" />
+        <div className="text-sm text-mate-300 mb-8 animate-fade-in">
           Now in Beta — v2.0
         </div>
 
@@ -24,7 +25,7 @@ export default function HeroSection() {
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up">
           <a
-            href="#tryit"
+            href="/try-it"
             className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-mate-500 to-purple-600 hover:from-mate-400 hover:to-purple-500 text-white font-medium text-lg transition-all shadow-xl shadow-mate-500/30 hover:shadow-mate-500/50"
           >
             Try Mate Now
