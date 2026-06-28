@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar"
+import Reveal from "./components/Reveal"
 import HeroSection from "./components/sections/HeroSection"
 import AboutSection from "./components/sections/AboutSection"
 import FeaturesSection from "./components/sections/FeaturesSection"
@@ -13,11 +14,11 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <AboutSection />
-        <FeaturesSection />
-        <TryItSection />
-        <CommunitySection />
-        <ContactSection />
+        <Reveal><AboutSection /></Reveal>
+        <Reveal><FeaturesSection /></Reveal>
+        <Reveal><TryItSection /></Reveal>
+        <Reveal><CommunitySection /></Reveal>
+        <Reveal><ContactSection /></Reveal>
       </main>
       <Footer />
     </>
