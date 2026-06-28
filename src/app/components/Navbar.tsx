@@ -8,7 +8,7 @@ const navItems = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Features", href: "#features" },
-  { label: "Try It", href: "#tryit" },
+  { label: "Demo", href: "#demo" },
   { label: "Community", href: "#community" },
   { label: "Contact", href: "#contact" },
 ]
@@ -58,7 +58,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#tryit"
+              href="#demo"
               className="ml-4 px-5 py-2 text-sm font-medium rounded-xl bg-gradient-to-r from-mate-500 to-purple-600 hover:from-mate-400 hover:to-purple-500 text-white transition-all shadow-lg shadow-mate-500/25"
             >
               Get Started
@@ -95,7 +95,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#tryit"
+              href="#demo"
               onClick={() => setMobileOpen(false)}
               className="block px-4 py-3 text-center text-sm font-medium rounded-xl bg-gradient-to-r from-mate-500 to-purple-600 text-white mt-3"
             >
