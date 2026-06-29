@@ -63,7 +63,7 @@ export default function Navbar() {
             ))}
             <button
               onClick={toggleLang}
-              className="px-3 py-1.5 text-xs font-medium rounded-lg border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-all uppercase tracking-wider"
+              className="px-3 py-1.5 text-xs font-medium rounded-full bg-white text-[#0a0a0f] hover:bg-white/90 transition-all uppercase tracking-wider"
             >
               {lang === "en" ? "FR" : "EN"}
             </button>
@@ -101,7 +101,7 @@ export default function Navbar() {
             <div className="px-4 pt-2">
               <button
                 onClick={() => { toggleLang(); setMobileOpen(false) }}
-                className="w-full px-3 py-1.5 text-xs font-medium rounded-lg border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-all uppercase tracking-wider"
+                className="w-full px-3 py-1.5 text-xs font-medium rounded-full bg-white text-[#0a0a0f] hover:bg-white/90 transition-all uppercase tracking-wider"
               >
                 {lang === "en" ? "FR" : "EN"}
               </button>
