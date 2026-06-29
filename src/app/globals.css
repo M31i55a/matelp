@@ -104,3 +104,7 @@
     padding-bottom: 7rem;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
