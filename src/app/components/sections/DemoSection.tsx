@@ -111,7 +111,7 @@ export default function DemoSection() {
           style={{ opacity: demoReveal }}
         >
           <div className="w-full max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
               {/* Left: Demo video */}
               <div className="relative rounded-2xl bg-[#0a0a0f]/5 border border-[#0a0a0f]/10 overflow-hidden" style={{ aspectRatio: "16/9" }}>
                 <video
@@ -127,10 +127,10 @@ export default function DemoSection() {
 
               {/* Right: Scroll timeline features */}
               <div className="flex flex-col justify-center">
-                <div className="flex gap-6 lg:gap-8">
+                <div className="flex gap-4 sm:gap-6 lg:gap-8">
                   {/* Vertical timeline */}
                   <div className="relative flex flex-col items-center shrink-0 pt-1">
-                    <div className="w-0.5 bg-[#0a0a0f]/10 rounded-full flex-1 min-h-[200px]" />
+                    <div className="w-0.5 bg-[#0a0a0f]/10 rounded-full flex-1 min-h-[140px] sm:min-h-[200px]" />
                     {t.demo.items.map((_, i) => {
                       const dotPos = t.demo.items.length > 1 ? i / (t.demo.items.length - 1) : 0.5
                       return (
@@ -158,7 +158,7 @@ export default function DemoSection() {
                   </div>
 
                   {/* Feature content */}
-                  <div className="flex-1 space-y-5 min-w-0">
+                  <div className="flex-1 space-y-4 sm:space-y-5 min-w-0">
                     <p className="text-xs uppercase tracking-widest text-[#0a0a0f]/40">{t.demo.features}</p>
 
                     {/* Command badge */}
@@ -166,7 +166,7 @@ export default function DemoSection() {
                       <kbd className="text-mate-600 font-semibold">{t.demo.items[featureIndex].cmd}</kbd>
                     </div>
 
-                    <h3 className="text-2xl sm:text-3xl font-bold text-[#0a0a0f] leading-tight">
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#0a0a0f] leading-tight">
                       {t.demo.items[featureIndex].title}
                     </h3>
 

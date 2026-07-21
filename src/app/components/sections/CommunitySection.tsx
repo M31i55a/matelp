@@ -23,7 +23,7 @@ export default function CommunitySection() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-4 max-w-lg mx-auto mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-lg mx-auto mb-16">
           {links.map((link) => (
             <a
               key={link.label}

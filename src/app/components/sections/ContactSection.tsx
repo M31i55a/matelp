@@ -1,7 +1,5 @@
 "use client"
 
-"use client"
-
 import { useState } from "react"
 import { useT } from "../../context/LanguageContext"
 
@@ -29,7 +27,7 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="glow-card p-6 sm:p-8">
+        <div className="glow-card p-5 sm:p-8">
           {submitted ? (
             <div className="text-center py-12 animate-fade-in">
               <div className="w-16 h-16 rounded-full bg-mate-500/20 border border-mate-500/30 flex items-center justify-center mx-auto">
