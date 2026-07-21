@@ -31,18 +31,18 @@ export default function AboutSection() {
   const textContent = (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div className="max-w-xl px-1 sm:px-0">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight relative">
+        <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight relative">
           {t.about.h1}
           <br />
           <span className="text-gradient">{t.about.h2}</span>
         </h2>
-        <p className="mt-6 text-white/50 text-lg leading-relaxed">
+        <p className="mt-8 text-white/50 text-lg leading-relaxed">
           {t.about.p1}
         </p>
-        <p className="mt-4 text-white/40 text-base leading-relaxed">
+        <p className="mt-6 text-white/40 text-base leading-relaxed">
           {t.about.p2}
         </p>
-        <div className="mt-8 space-y-4">
+        <div className="mt-12 space-y-4">
           {specs.map((item) => (
             <div key={item.labelKey} className="flex flex-wrap items-center gap-3 sm:gap-4">
               <div className="w-2 h-2 rounded-full bg-mate-500 shrink-0" />
@@ -58,7 +58,7 @@ export default function AboutSection() {
   // Mobile: plain section without scroll-driven animation
   if (isMobile) {
     return (
-      <section id="about" className="relative py-20 bg-[#0a0a0f] overflow-hidden">
+      <section id="about" className="relative py-28 bg-[#0a0a0f] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-mate-500/5 to-transparent" />
         <div className="absolute -top-20 -left-20 w-64 h-64 bg-mate-500/10 rounded-full blur-[80px]" />
         <div className="absolute -bottom-10 -right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-[100px]" />
