@@ -26,7 +26,11 @@ export default function DemoSection() {
   const demoReveal = smoothstep(progress, 0.62, 0.76)
   const textProgress = smoothstep(progress, 0.76, 1.00)
 
-  const featureIndex = Math.min(Math.floor(textProgress * t.demo.items.length), t.demo.items.length - 1)
+  const totalFeatures = Math.max(1, t.demo.items.length)
+  const featureIndex = Math.min(
+    Math.round(textProgress * (totalFeatures - 1)),
+    totalFeatures - 1,
+  )
   const splitX = splitDone * 180
 
   const fullGrowX = Math.max(rectGrowX1, rectGrowX2)
