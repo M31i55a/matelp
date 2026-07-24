@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import SmoothScroll from "./components/SmoothScroll"
 import { LanguageProvider } from "./context/LanguageContext"
+import { ThemeProvider } from "./context/ThemeContext"
 
 export const metadata: Metadata = {
   title: "Mate 2.0 — Your Intelligent Companion",
@@ -20,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="scroll-smooth">
       <head />
-      <body className="min-h-screen bg-[#0a0a0f] text-white"><LanguageProvider><SmoothScroll>{children}</SmoothScroll></LanguageProvider></body>
+      <body className="min-h-screen bg-[color:var(--bg-page)] text-[color:var(--text-primary)] transition-colors duration-300"><ThemeProvider><LanguageProvider><SmoothScroll>{children}</SmoothScroll></LanguageProvider></ThemeProvider></body>
     </html>
   )
 }

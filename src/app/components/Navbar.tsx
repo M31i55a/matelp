@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { cn } from "../lib/utils"
 import { useT, useLang } from "../context/LanguageContext"
+import { useTheme } from "../context/ThemeContext"
 
 const navItems = [
   { labelKey: "home", href: "#home" },
@@ -18,6 +19,7 @@ const navItems = [
 export default function Navbar() {
   const t = useT()
   const { toggleLang, lang } = useLang()
+  const { theme, toggleTheme } = useTheme()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -62,6 +64,13 @@ export default function Navbar() {
               </a>
             ))}
             <button
+              onClick={toggleTheme}
+              className="px-3 py-1.5 text-xs font-medium rounded-full border border-white/10 bg-white/10 text-[color:var(--text-primary)] hover:bg-white/20 transition-all"
+              aria-label="Toggle color theme"
+            >
+              {theme === "dark" ? "☀️" : "🌙"}
+            </button>
+            <button
               onClick={toggleLang}
               className="px-3 py-1.5 text-xs font-medium rounded-full bg-white text-[#0a0a0f] hover:bg-white/90 transition-all uppercase tracking-wider"
             >
@@ -98,10 +107,17 @@ export default function Navbar() {
                 {t.navbar[item.labelKey as keyof typeof t.navbar]}
               </a>
             ))}
-            <div className="px-4 pt-2">
+            <div className="px-4 pt-2 flex items-center gap-2">
+              <button
+                onClick={() => { toggleTheme(); setMobileOpen(false) }}
+                className="px-3 py-1.5 text-xs font-medium rounded-full border border-white/10 bg-white/10 text-[color:var(--text-primary)] hover:bg-white/20 transition-all"
+                aria-label="Toggle color theme"
+              >
+                {theme === "dark" ? "☀️" : "🌙"}
+              </button>
               <button
                 onClick={() => { toggleLang(); setMobileOpen(false) }}
-                className="w-full px-3 py-1.5 text-xs font-medium rounded-full bg-white text-[#0a0a0f] hover:bg-white/90 transition-all uppercase tracking-wider"
+                className="flex-1 px-3 py-1.5 text-xs font-medium rounded-full bg-white text-[#0a0a0f] hover:bg-white/90 transition-all uppercase tracking-wider"
               >
                 {lang === "en" ? "FR" : "EN"}
               </button>
