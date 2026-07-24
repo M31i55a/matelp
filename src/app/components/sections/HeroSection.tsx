@@ -41,20 +41,15 @@ export default function HeroSection() {
           </a>
         </div>
 
-        <div className="mt-12 sm:mt-16 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-white/30 animate-fade-in">
-          <div className="text-center">
+        <div className="mt-10 sm:mt-14 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-white/30 animate-fade-in">
+          <div className="text-center min-w-[120px]">
             <div className="text-2xl sm:text-3xl font-bold text-white">10x</div>
             <div className="text-xs sm:text-sm mt-1">{t.hero.stat1}</div>
           </div>
-          <div className="w-px h-12 bg-white/10" />
-          <div className="text-center">
+          <div className="hidden sm:block w-px h-12 bg-white/10" />
+          <div className="text-center min-w-[120px]">
             <div className="text-2xl sm:text-3xl font-bold text-white">100%</div>
             <div className="text-xs sm:text-sm mt-1">{t.hero.stat2}</div>
-          </div>
-          <div className="w-px h-12 bg-white/10" />
-          <div className="text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-white">5k+</div>
-            <div className="text-xs sm:text-sm mt-1">{t.hero.stat3}</div>
           </div>
         </div>
       </div>

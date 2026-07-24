@@ -49,14 +49,14 @@ export default function DemoSection() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/15 rounded-full blur-[120px]" />
         <GridBackground />
         {/* The whole scene: "How i" + white rect + "t works" */}
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0">
           {/* "How i" - absolute positioned, slides left */}
           <span
             className="absolute text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight select-none whitespace-nowrap transition-colors z-10"
             style={{
-              transform: `translateX(calc(-50% - ${splitX + rectW / 2}px))`,
+              left: "50%",
               top: "50%",
-              marginTop: "-0.4em",
+              transform: `translate(calc(-100% - ${splitX + rectW / 2}px), -50%)`,
               color: splitDone > 0.5 ? "#a78bfa" : "white",
               opacity: (1 - rectGrowX2) * (1 - demoReveal * 0.6),
             }}
@@ -68,9 +68,9 @@ export default function DemoSection() {
           <span
             className="absolute text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight select-none whitespace-nowrap transition-colors z-10"
             style={{
-              transform: `translateX(calc(50% + ${splitX + rectW / 2}px))`,
+              left: "50%",
               top: "50%",
-              marginTop: "-0.4em",
+              transform: `translate(${splitX + rectW / 2}px, -50%)`,
               color: splitDone > 0.5 ? "#a78bfa" : "white",
               opacity: (1 - rectGrowX2) * (1 - demoReveal * 0.6),
             }}
@@ -80,8 +80,11 @@ export default function DemoSection() {
 
           {/* The white element — starts as a thin vertical line, grows to fill the entire screen */}
           <div
-            className="bg-[#f1eff8] flex items-center justify-center overflow-hidden transition-shadow duration-500 relative z-0"
+            className="bg-[#f1eff8] flex items-center justify-center overflow-hidden transition-shadow duration-500 absolute z-0"
             style={{
+              left: "50%",
+              top: "50%",
+              transform: "translate(-50%, -50%)",
               width: rectGrowX2 > 0.99 ? "100vw" : `${rectW}px`,
               height: rectGrowY > 0.99 ? "100vh" : `${rectH}px`,
               borderRadius: rectGrowX2 > 0.9 && rectGrowY > 0.9 ? "0px" : "32px",
@@ -95,8 +98,10 @@ export default function DemoSection() {
             <span
               className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0a0a0f] whitespace-nowrap absolute"
               style={{
+                left: "50%",
+                top: "50%",
+                transform: `translate(-50%, -50%) scale(${0.8 + diveIn * 0.2})`,
                 opacity: diveIn * (1 - demoReveal),
-                transform: `scale(${0.8 + diveIn * 0.2})`,
                 pointerEvents: demoReveal > 0.5 ? "none" : "auto",
               }}
             >
