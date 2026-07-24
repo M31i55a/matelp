@@ -22,7 +22,7 @@ export default function ContactSection() {
             {t.contact.title}{" "}
             <span className="text-gradient">{t.contact.accent}</span>
           </h2>
-          <p className="mt-4 text-white/50 text-lg">
+          <p className="mt-4 text-[color:var(--text-secondary)] text-lg">
             {t.contact.subtitle}
           </p>
         </div>
@@ -42,43 +42,43 @@ export default function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="name" className="block text-sm text-white/60 mb-2">{t.contact.name}</label>
+                  <label htmlFor="name" className="block text-sm text-[color:var(--text-secondary)] mb-2">{t.contact.name}</label>
                   <input
                     id="name"
                     type="text"
                     required
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-mate-500/50 transition-all"
+                    className="w-full bg-[color:var(--bg-elevated)] border border-[color:var(--border-color)] rounded-xl px-4 py-3 text-[color:var(--text-primary)] placeholder:[color:var(--text-muted)] focus:outline-none focus:border-mate-500/50 transition-all"
                     placeholder={t.contact.namePlaceholder}
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm text-white/60 mb-2">{t.contact.email}</label>
+                  <label htmlFor="email" className="block text-sm text-[color:var(--text-secondary)] mb-2">{t.contact.email}</label>
                   <input
                     id="email"
                     type="email"
                     required
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-mate-500/50 transition-all"
+                    className="w-full bg-[color:var(--bg-elevated)] border border-[color:var(--border-color)] rounded-xl px-4 py-3 text-[color:var(--text-primary)] placeholder:[color:var(--text-muted)] focus:outline-none focus:border-mate-500/50 transition-all"
                     placeholder={t.contact.emailPlaceholder}
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="subject" className="block text-sm text-white/60 mb-2">{t.contact.subject}</label>
+                <label htmlFor="subject" className="block text-sm text-[color:var(--text-secondary)] mb-2">{t.contact.subject}</label>
                 <input
                   id="subject"
                   type="text"
                   required
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-mate-500/50 transition-all"
+                  className="w-full bg-[color:var(--bg-elevated)] border border-[color:var(--border-color)] rounded-xl px-4 py-3 text-[color:var(--text-primary)] placeholder:[color:var(--text-muted)] focus:outline-none focus:border-mate-500/50 transition-all"
                   placeholder={t.contact.subjectPlaceholder}
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm text-white/60 mb-2">{t.contact.message}</label>
+                <label htmlFor="message" className="block text-sm text-[color:var(--text-secondary)] mb-2">{t.contact.message}</label>
                 <textarea
                   id="message"
                   required
                   rows={5}
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-mate-500/50 transition-all resize-none"
+                  className="w-full bg-[color:var(--bg-elevated)] border border-[color:var(--border-color)] rounded-xl px-4 py-3 text-[color:var(--text-primary)] placeholder:[color:var(--text-muted)] focus:outline-none focus:border-mate-500/50 transition-all resize-none"
                   placeholder={t.contact.messagePlaceholder}
                 />
               </div>
